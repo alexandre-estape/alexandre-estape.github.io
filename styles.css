@@ -1,0 +1,269 @@
+/* Hamburguer Menu */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+body.light-mode {
+    background-color: white;
+}
+
+:root {
+    --bar-width: 20px;
+    --bar-height: 3px;
+    --hamburger-gap: 3px;
+    --foreground: #8f8f8f;
+    --background: white;
+    --hamburger-margin: 5px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 10rem;
+    min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked)+.sidebar {
+    translate: 0;
+}
+
+
+/* CSS Code for the rest of HTML */
+
+
+.fade-in_home {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#Name {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}
+
+#Name.dark-mode {
+    color: black;
+}
+
+#Presentation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}
+
+#Presentation.dark-mode {
+    color: black;
+}
+
+#dark-mode-btn{
+    position: absolute;
+    top: 7px;
+    left: 1500px;
+    z-index: 1;
+    width: 30px; /* Adjust width and height to match the image size */
+    height: 30px;
+    background-image: url('bombilla.png');
+    background-size: cover; /* Ensures the image covers the entire button */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Add cursor pointer on hover */
+}
+
+#menu {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+}
+
+#sidebar_ {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#sidebar_text {
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+nav div {
+    margin-bottom: 15px;
+}
+
+a { /* Text in menu */
+    color: white;
+    text-decoration: none; /* Remove the underline */
+}
+
+#CV {
+    position: absolute;
+    left: 97.5%;
+    top: 6%;
+    z-index: 1;
+}
+
+.button-like-link {
+    display: inline-block;
+    background-color: rgb(53, 53, 53);
+    padding: 7px 7px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer; /* Add cursor pointer on hover */
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    transition: background-color 0.3s ease;
+
+}
+
+ .button-like-link:hover {
+     background-color: #8f8f8f;
+ }
+
+ #interaction {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 1500px;
+    top: 80px;
+    z-index: 1;
+ }
+
+#title {
+    position: absolute; /* Does not affect the positioning of other elements around it */
+    color: white;
+    font-size: 30px; /* I forgot 'px' */
+    font-family: Roboto, sans-serif;
+    z-index: 4;
+    top: 10%;
+    left: 20%;
+}
+
+#title.light-mode {
+    color: black;
+}
+
+#text {
+     position: absolute;
+     color: white;
+     font-size: 15px;
+     font-family: Roboto, sans-serif;
+     z-index: 4;
+     top: 20%;
+     left: 20%;
+ }
+
+#text.light-mode {
+     color: black;
+ }
