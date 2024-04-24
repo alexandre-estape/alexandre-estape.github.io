@@ -165,12 +165,12 @@ body.light-mode {
 
 #dark-mode-btn{
     position: absolute;
-    top: 7px;
-    left: 1500px;
+    top: 1%;
+    left: 97%;
     z-index: 1;
     width: 30px; /* Adjust width and height to match the image size */
     height: 30px;
-    background-image: url('bombilla.png');
+    background-image: url('lightbulb.png');
     background-size: cover; /* Ensures the image covers the entire button */
     border: none; /* Remove button border */
     cursor: pointer; /* Add cursor pointer on hover */
@@ -206,7 +206,7 @@ a { /* Text in menu */
 
 #CV {
     position: absolute;
-    left: 97.5%;
+    left: 97%;
     top: 6%;
     z-index: 1;
 }
@@ -235,8 +235,8 @@ a { /* Text in menu */
     width: 30px;
     height: 30px;
     position: absolute;
-    left: 1500px;
-    top: 80px;
+    left: 97%;
+    top: 11.2%;
     z-index: 1;
  }
 
