@@ -22,6 +22,7 @@ function toggleDarkMode() {
     body.classList.toggle('dark-mode');
     MyName.classList.toggle("dark-mode");
     MyPresentation.classList.toggle("dark-mode");
+
 }
 
 darkModeButton.addEventListener('click', () => { // Dark Mode button

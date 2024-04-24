@@ -255,15 +255,51 @@ a { /* Text in menu */
 }
 
 #text {
-     position: absolute;
-     color: white;
-     font-size: 15px;
-     font-family: Roboto, sans-serif;
-     z-index: 4;
-     top: 20%;
-     left: 20%;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    z-index: 4;
+    top: 20%;
+    left: 20%;
+    max-width: 1000px;
  }
 
 #text.light-mode {
      color: black;
  }
+
+#list {
+      position: absolute;
+      color: white;
+      font-size: 17px;
+      font-family: Roboto, sans-serif;
+      z-index: 4;
+      top: 30%;
+      left: 20%;
+
+      max-width: 1000px;
+
+}
+
+#list.dark-mode {
+    color: black;
+}
+
+#bullet_point {
+    margin-bottom: 12px;
+}
+
+#Drive {
+    position: absolute;
+    left: 17%;
+    top: 10.5%;
+    z-index: 10;
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    background-image: url('Drive.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}

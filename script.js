@@ -1,6 +1,7 @@
 const darkModeButton = document.getElementById('dark-mode-btn');
 const MyTitle = document.getElementById('title');
 const MyText = document.getElementById('text');
+const MyList = document.getElementById('list');
 const body = document.body;
 
 function toggleDarkMode() {
@@ -9,6 +10,8 @@ function toggleDarkMode() {
     body.classList.toggle('light-mode');
     MyTitle.classList.toggle('light-mode');
     MyText.classList.toggle('light-mode');
+    MyList.classList.toggle("dark-mode");
+
 }
 
 darkModeButton.addEventListener('click', () => { // Dark Mode Button
