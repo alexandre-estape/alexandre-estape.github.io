@@ -1,0 +1,54 @@
+h1 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.horizontal-menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.horizontal-menu li {
+
+    margin-right: 0px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    display: inline-block;
+}
+
+.horizontal-menu li:hover {
+    background-color: rgb(203, 203, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+.grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 100px 27px;
+    gap: 0px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-bottom: 0px;
+}
+
+.right {
+    border-left: 0px;
+}
+
+.right:hover{
+    cursor: pointer;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
