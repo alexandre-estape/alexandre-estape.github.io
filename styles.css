@@ -1,64 +1,61 @@
 h1 {
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
 .horizontal-menu {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .horizontal-menu li {
-
-    user-select: none;
-    margin-right: 0px;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    display: inline-block;
+  user-select: none;
+  margin-right: 0px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  display: inline-block;
 }
 
 .horizontal-menu li:hover {
-    background-color: rgb(203, 203, 255);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
+  background-color: rgb(203, 203, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .grid-container {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 100px 27px;
-    gap: 0px;
-    top: 45%;
-    left: 45%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 100px 27px;
+  gap: 0px;
+  top: 45%;
+  left: 45%;
 }
 
 .grid-item {
-    background-color: white;
-    padding: 5px;
-    border: 1px solid black;
-    border-bottom: 0px;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  border-bottom: 0px;
 }
 
 .right {
-    border-left: 0px;
+  border-left: 0px;
 }
 
-.right:hover{
-    cursor: pointer;
+.right:hover {
+  cursor: pointer;
 }
 
 .bottom {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-
 .green_ {
-    background-color: rgb(207, 255, 207);
+  background-color: rgb(207, 255, 207);
 }
 
 .green_:hover {
-    background-color: rgb(125, 255, 125);
-
+  background-color: rgb(125, 255, 125);
 }
